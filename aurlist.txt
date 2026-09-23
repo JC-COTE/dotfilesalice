@@ -1,0 +1,12 @@
+brave-bin
+discord-canary
+maple-mono-nf-cn-unhinted
+melonds
+minecraft-launcher
+rofi-bluetooth-git
+spotify
+stremio-enhanced-bin
+waybar-cava-git
+xpadneo-dkms
+yay
+yay-debug
