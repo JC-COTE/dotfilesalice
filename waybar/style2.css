@@ -1,0 +1,48 @@
+
+#cpu, #memory, #clock, #tray, #bluetooth, #memory, #temperature, #workspaces button, #workspaces button.active, #pulseaudio {
+    color:#271d1e;
+}
+
+#workspaces button.active {
+    background-color: #dcbf86;
+}
+
+    window#waybar {
+    background-color: #f5eed2;
+    color: #8b0ab3;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+    border-bottom-color: #221819;
+    border-radius: 16px;
+}
+
+
+#cpu {
+    font-family: "JetBrainsMono Nerd Font", "Maple Mono NF";
+    font-size: 14px;
+    padding: 0 6px;
+    margin: 0;
+}
+#workspaces button {
+    font-family: "JetBrainsMono Nerd Font";
+    background-color: transparent;
+}
+
+#cpu, #memory, #clock, #tray, #bluetooth, #memory, #temperature {
+    margin: 0 2px;
+    font-family: "JetBrainsMono Nerd Font", "Maple Mono NF";
+}
+
+#pulseaudio{
+    padding:0 10px;
+}
+
+#workspaces button.active {
+    font-family: "JetBrainsMono Nerd Font", "Maple Mono NF";
+    border-radius: 16px;
+}
+
+#custom-discord{
+    padding: 0 10px;   
+}
