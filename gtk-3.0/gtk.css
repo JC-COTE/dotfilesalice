@@ -1,0 +1,119 @@
+/* ===== Thunar — Waybar purple style ===== */
+/* Everything is scoped under .thunar so other GTK apps are untouched */
+
+@define-color wb_bg    #000000;
+@define-color wb_fg    #8b0ab3;
+@define-color wb_sel   #45475a;
+@define-color wb_muted #6c757d;
+@define-color wb_hl    #c878e6;
+
+.thunar,
+.thunar * {
+    font-family: "JetBrainsMono Nerd Font", "Maple Mono NF";
+}
+
+/* Main window */
+.thunar {
+    background-color: @wb_bg;
+    color: @wb_fg;
+}
+
+/* File view + sidebar */
+.thunar .view,
+.thunar treeview,
+.thunar iconview,
+.thunar .sidebar {
+    background-color: @wb_bg;
+    color: @wb_fg;
+}
+
+.thunar .view:selected,
+.thunar treeview:selected,
+.thunar iconview:selected {
+    background-color: @wb_sel;
+    color: @wb_hl;
+}
+
+.thunar iconview:selected {
+    border-radius: 8px;
+}
+
+/* Column headers in list view */
+.thunar treeview header button {
+    background-color: @wb_bg;
+    background-image: none;
+    color: @wb_fg;
+    border: none;
+    border-bottom: 1px solid @wb_sel;
+    box-shadow: none;
+}
+
+/* Toolbar / menubar: purple bottom border like the bar */
+.thunar toolbar,
+.thunar menubar,
+.thunar headerbar {
+    background-color: @wb_bg;
+    background-image: none;
+    color: @wb_fg;
+    border: none;
+    border-bottom: 3px solid @wb_fg;
+    box-shadow: none;
+}
+
+/* Buttons (toolbar, path bar) */
+.thunar button {
+    background-color: transparent;
+    background-image: none;
+    color: @wb_fg;
+    border: none;
+    border-radius: 16px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.thunar button:hover,
+.thunar button:checked {
+    background-color: @wb_sel;
+}
+
+/* Location bar */
+.thunar entry {
+    background-color: @wb_bg;
+    background-image: none;
+    color: @wb_fg;
+    border: none;
+    border-bottom: 2px solid @wb_fg;
+    border-radius: 16px;
+    box-shadow: none;
+    padding: 4px 12px;
+}
+
+/* Status bar */
+.thunar statusbar,
+.thunar statusbar label {
+    color: @wb_muted;
+}
+
+/* Divider between sidebar and files */
+.thunar paned > separator {
+    background-color: @wb_sel;
+    background-image: none;
+    min-width: 1px;
+}
+
+/* Scrollbars */
+.thunar scrollbar {
+    background-color: transparent;
+    border: none;
+}
+
+.thunar scrollbar slider {
+    background-color: @wb_sel;
+    border-radius: 16px;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+.thunar scrollbar slider:hover {
+    background-color: @wb_fg;
+}
