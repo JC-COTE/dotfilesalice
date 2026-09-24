@@ -1,0 +1,172 @@
+/* ===== GTK4 apps (pavucontrol) — Waybar purple style ===== */
+
+@define-color wb_bg    #000000;
+@define-color wb_fg    #8b0ab3;
+@define-color wb_sel   #45475a;
+@define-color wb_muted #6c757d;
+@define-color wb_hl    #c878e6;
+
+window,
+window.background {
+    background-color: @wb_bg;
+    color: @wb_fg;
+    font-family: "JetBrainsMono Nerd Font", "Maple Mono NF";
+}
+
+/* Title bar: purple bottom border like the bar */
+headerbar {
+    background-color: @wb_bg;
+    background-image: none;
+    color: @wb_fg;
+    border: none;
+    border-bottom: 3px solid @wb_fg;
+    box-shadow: none;
+}
+
+/* Tabs (Playback / Recording / Output / Input / Configuration) */
+notebook,
+notebook > stack,
+notebook > header {
+    background-color: @wb_bg;
+}
+
+notebook > header {
+    border-bottom: 1px solid @wb_sel;
+    box-shadow: none;
+}
+
+notebook > header tab {
+    color: @wb_muted;
+    border-radius: 16px;
+    padding: 4px 12px;
+    box-shadow: none;
+}
+
+notebook > header tab:checked {
+    color: @wb_hl;
+    background-color: @wb_sel;
+    box-shadow: none;
+}
+
+/* Lists of devices / streams */
+scrolledwindow,
+viewport,
+list,
+list > row {
+    background-color: @wb_bg;
+    color: @wb_fg;
+}
+
+label {
+    color: @wb_fg;
+}
+
+label.dim-label {
+    color: @wb_muted;
+}
+
+/* Volume sliders */
+scale trough {
+    background-color: @wb_sel;
+    border: none;
+    border-radius: 16px;
+    min-height: 6px;
+}
+
+scale highlight {
+    background-color: @wb_fg;
+    background-image: none;
+    border: none;
+    border-radius: 16px;
+}
+
+scale slider {
+    background-color: @wb_fg;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50%;
+    min-width: 14px;
+    min-height: 14px;
+}
+
+scale slider:hover {
+    background-color: @wb_hl;
+}
+
+/* Sound level meters */
+levelbar trough {
+    background-color: @wb_sel;
+    border: none;
+    border-radius: 16px;
+}
+
+levelbar block.filled {
+    background-color: @wb_fg;
+    border-radius: 16px;
+}
+
+levelbar block.empty {
+    background-color: transparent;
+}
+
+/* Buttons + dropdowns */
+button,
+dropdown > button,
+menubutton > button {
+    background-color: transparent;
+    background-image: none;
+    color: @wb_fg;
+    border: 1px solid @wb_sel;
+    border-radius: 16px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+button:hover,
+button:checked {
+    background-color: @wb_sel;
+}
+
+popover > contents {
+    background-color: @wb_bg;
+    color: @wb_fg;
+    border: 1px solid @wb_fg;
+    border-radius: 16px;
+}
+
+/* Checkboxes (mute / lock channels) */
+check,
+radio {
+    background-color: @wb_bg;
+    background-image: none;
+    border: 1px solid @wb_fg;
+    box-shadow: none;
+}
+
+check:checked,
+radio:checked {
+    background-color: @wb_fg;
+    color: @wb_bg;
+}
+
+separator {
+    background-color: @wb_sel;
+}
+
+/* Scrollbars */
+scrollbar {
+    background-color: transparent;
+    border: none;
+}
+
+scrollbar slider {
+    background-color: @wb_sel;
+    border-radius: 16px;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+scrollbar slider:hover {
+    background-color: @wb_fg;
+}
